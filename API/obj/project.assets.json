@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Humanizer.Core/2.8.26": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Humanizer.dll": {}
+        }
+      },
       "Microsoft.Data.Sqlite.Core/6.0.3": {
         "type": "package",
         "dependencies": {
@@ -48,6 +57,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design/6.0.3": {
+        "type": "package",
+        "dependencies": {
+          "Humanizer.Core": "2.8.26",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.3"
+        },
+        "compile": {
+          "lib/net6.0/_._": {}
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        },
+        "build": {
+          "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/6.0.3": {
@@ -512,7 +537,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Domain": "1.0.0",
-          "Persistance": "1.0.0"
+          "Persistence": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Application.dll": {}
@@ -531,7 +556,7 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
-      "Persistance/1.0.0": {
+      "Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -539,15 +564,31 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.3"
         },
         "compile": {
-          "bin/placeholder/Persistance.dll": {}
+          "bin/placeholder/Persistence.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Persistance.dll": {}
+          "bin/placeholder/Persistence.dll": {}
         }
       }
     }
   },
   "libraries": {
+    "Humanizer.Core/2.8.26": {
+      "sha512": "OiKusGL20vby4uDEswj2IgkdchC1yQ6rwbIkZDVBPIR6al2b7n3pC91elBul9q33KaBgRKhbZH3+2Ur4fnWx2A==",
+      "type": "package",
+      "path": "humanizer.core/2.8.26",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "humanizer.core.2.8.26.nupkg.sha512",
+        "humanizer.core.nuspec",
+        "lib/netstandard1.0/Humanizer.dll",
+        "lib/netstandard1.0/Humanizer.xml",
+        "lib/netstandard2.0/Humanizer.dll",
+        "lib/netstandard2.0/Humanizer.xml",
+        "logo.png"
+      ]
+    },
     "Microsoft.Data.Sqlite.Core/6.0.3": {
       "sha512": "3EIhLzG+WeJ2AtmGph8aSA5pH9weDOZ9Fox6oaDSiPvj6TIehzYkdW0ySMAfckTbv8V1vCMeEmtqhwEmyK9fYA==",
       "type": "package",
@@ -604,6 +645,21 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.6.0.3.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.Design/6.0.3": {
+      "sha512": "Gc3XhQ4vLK4rlGpZi8zaa4bl0t894QxqMXHSbDSsx8d7ghRaLbGIH1tQawpo2hriU/q918eepbCyoISD89Xx1w==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.design/6.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "build/net6.0/Microsoft.EntityFrameworkCore.Design.props",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
+        "microsoft.entityframeworkcore.design.6.0.3.nupkg.sha512",
+        "microsoft.entityframeworkcore.design.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/6.0.3": {
@@ -1309,16 +1365,17 @@
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
     },
-    "Persistance/1.0.0": {
+    "Persistence/1.0.0": {
       "type": "project",
-      "path": "../Persistance/Persistance.csproj",
-      "msbuildProject": "../Persistance/Persistance.csproj"
+      "path": "../Persistence/Persistence.csproj",
+      "msbuildProject": "../Persistence/Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Application >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.3",
+      "Microsoft.EntityFrameworkCore.Design >= 6.0.3",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.3",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -1329,11 +1386,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\source\\Training\\Reactivities\\API\\API.csproj",
+      "projectUniqueName": "D:\\source\\Training\\Reactivities\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "d:\\source\\Training\\Reactivities\\API\\API.csproj",
+      "projectPath": "D:\\source\\Training\\Reactivities\\API\\API.csproj",
       "packagesPath": "D:\\Users\\Shawn_Votaw\\.nuget\\packages\\",
-      "outputPath": "d:\\source\\Training\\Reactivities\\API\\obj\\",
+      "outputPath": "D:\\source\\Training\\Reactivities\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "D:\\Users\\Shawn_Votaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1343,14 +1400,17 @@
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "\\\\phf-fs01\\IT\\Web Development\\ntcpackages": {},
+        "http://phf-azuredevops/DefaultCollection/_packaging/NTCNuGets/nuget/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "d:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
-              "projectPath": "d:\\source\\Training\\Reactivities\\Application\\Application.csproj"
+            "D:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
+              "projectPath": "D:\\source\\Training\\Reactivities\\Application\\Application.csproj"
             }
           }
         }
@@ -1366,6 +1426,12 @@
         "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.3, )"
+          },
+          "Microsoft.EntityFrameworkCore.Design": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
             "target": "Package",
             "version": "[6.0.3, )"
           },

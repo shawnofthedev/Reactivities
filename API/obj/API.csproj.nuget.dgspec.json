@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\source\\Training\\Reactivities\\API\\API.csproj": {}
+    "D:\\source\\Training\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "d:\\source\\Training\\Reactivities\\API\\API.csproj": {
+    "D:\\source\\Training\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\source\\Training\\Reactivities\\API\\API.csproj",
+        "projectUniqueName": "D:\\source\\Training\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "d:\\source\\Training\\Reactivities\\API\\API.csproj",
+        "projectPath": "D:\\source\\Training\\Reactivities\\API\\API.csproj",
         "packagesPath": "D:\\Users\\Shawn_Votaw\\.nuget\\packages\\",
-        "outputPath": "d:\\source\\Training\\Reactivities\\API\\obj\\",
+        "outputPath": "D:\\source\\Training\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\Shawn_Votaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,14 +21,17 @@
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\phf-fs01\\IT\\Web Development\\ntcpackages": {},
+          "http://phf-azuredevops/DefaultCollection/_packaging/NTCNuGets/nuget/v3/index.json": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "d:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
-                "projectPath": "d:\\source\\Training\\Reactivities\\Application\\Application.csproj"
+              "D:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
+                "projectPath": "D:\\source\\Training\\Reactivities\\Application\\Application.csproj"
               }
             }
           }
@@ -44,6 +47,12 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },
@@ -78,14 +87,14 @@
         }
       }
     },
-    "d:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
+    "D:\\source\\Training\\Reactivities\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\source\\Training\\Reactivities\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\source\\Training\\Reactivities\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "d:\\source\\Training\\Reactivities\\Application\\Application.csproj",
+        "projectPath": "D:\\source\\Training\\Reactivities\\Application\\Application.csproj",
         "packagesPath": "D:\\Users\\Shawn_Votaw\\.nuget\\packages\\",
-        "outputPath": "d:\\source\\Training\\Reactivities\\Application\\obj\\",
+        "outputPath": "D:\\source\\Training\\Reactivities\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\Shawn_Votaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -107,8 +116,8 @@
               "D:\\source\\Training\\Reactivities\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\source\\Training\\Reactivities\\Domain\\Domain.csproj"
               },
-              "d:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj": {
-                "projectPath": "d:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj"
+              "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -197,14 +206,14 @@
         }
       }
     },
-    "d:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj": {
+    "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj",
-        "projectName": "Persistance",
-        "projectPath": "d:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj",
+        "projectUniqueName": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "D:\\Users\\Shawn_Votaw\\.nuget\\packages\\",
-        "outputPath": "d:\\source\\Training\\Reactivities\\Persistance\\obj\\",
+        "outputPath": "D:\\source\\Training\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\Shawn_Votaw\\AppData\\Roaming\\NuGet\\NuGet.Config",

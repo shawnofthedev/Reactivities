@@ -2,8 +2,6 @@ D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Application.deps.js
 D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Application.dll
 D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Application.pdb
 D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Domain.dll
-D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Persistance.dll
-D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Persistance.pdb
 D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Domain.pdb
 D:\source\Training\Reactivities\Application\obj\Debug\net6.0\Application.csproj.AssemblyReference.cache
 D:\source\Training\Reactivities\Application\obj\Debug\net6.0\Application.GeneratedMSBuildEditorConfig.editorconfig
@@ -15,3 +13,5 @@ D:\source\Training\Reactivities\Application\obj\Debug\net6.0\Application.dll
 D:\source\Training\Reactivities\Application\obj\Debug\net6.0\refint\Application.dll
 D:\source\Training\Reactivities\Application\obj\Debug\net6.0\Application.pdb
 D:\source\Training\Reactivities\Application\obj\Debug\net6.0\ref\Application.dll
+D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Persistence.dll
+D:\source\Training\Reactivities\Application\bin\Debug\net6.0\Persistence.pdb

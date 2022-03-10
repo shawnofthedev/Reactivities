@@ -33,8 +33,8 @@
               "D:\\source\\Training\\Reactivities\\Domain\\Domain.csproj": {
                 "projectPath": "D:\\source\\Training\\Reactivities\\Domain\\Domain.csproj"
               },
-              "D:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj": {
-                "projectPath": "D:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj"
+              "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -123,14 +123,14 @@
         }
       }
     },
-    "D:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj": {
+    "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj",
-        "projectName": "Persistance",
-        "projectPath": "D:\\source\\Training\\Reactivities\\Persistance\\Persistance.csproj",
+        "projectUniqueName": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "D:\\source\\Training\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "D:\\Users\\Shawn_Votaw\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\Training\\Reactivities\\Persistance\\obj\\",
+        "outputPath": "D:\\source\\Training\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "D:\\Users\\Shawn_Votaw\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -164,6 +164,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
