@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Application.Core;
 using MediatR;
 using Persistence;
 
@@ -10,12 +11,12 @@ namespace Application.Activities
 {
     public class Delete
     {
-        public class Command : IRequest
+        public class Command : IRequest<Result<Unit>>
         {
             public Guid Id { get; set; }
         }
 
-        public class Handler : IRequestHandler<Command>
+        public class Handler : IRequestHandler<Command, Result<Unit>>
         {
             private readonly DataContext _context;
 
@@ -24,15 +25,23 @@ namespace Application.Activities
             _context = context;
             }
 
-            public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
+            public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
                 var activity = await _context.Activities.FindAsync(request.Id);
 
+                //Return a null result when the activity is not found
+                if (activity == null) return null;
+
                 _context.Remove(activity);
+  
+                //If nothing is written to DB then result will be false
+                //If number of changes are greater than 0 then true
+                var result = await _context.SaveChangesAsync() > 0;
 
-                await _context.SaveChangesAsync();
+                if (!result) return Result<Unit>.Failure("Failed to delete activity");
 
-                return Unit.Value;
+                //If successful notify ActivitiesApiController the request was successful
+                return Result<Unit>.Success(Unit.Value);
             }
         }
     }
