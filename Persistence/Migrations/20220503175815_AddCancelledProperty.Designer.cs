@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
@@ -10,9 +11,10 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20220503175815_AddCancelledProperty")]
+    partial class AddCancelledProperty
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.4");
@@ -51,18 +53,18 @@ namespace Persistence.Migrations
 
             modelBuilder.Entity("Domain.ActivityAttendee", b =>
                 {
-                    b.Property<string>("AppUserId")
+                    b.Property<string>("AppUserID")
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("ActivityId")
+                    b.Property<Guid>("ActivityID")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("IsHost")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("AppUserId", "ActivityId");
+                    b.HasKey("AppUserID", "ActivityID");
 
-                    b.HasIndex("ActivityId");
+                    b.HasIndex("ActivityID");
 
                     b.ToTable("ActivityAttendees");
                 });
@@ -269,13 +271,13 @@ namespace Persistence.Migrations
                 {
                     b.HasOne("Domain.Activity", "Activity")
                         .WithMany("Attendees")
-                        .HasForeignKey("ActivityId")
+                        .HasForeignKey("ActivityID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.AppUser", "AppUser")
                         .WithMany("Activities")
-                        .HasForeignKey("AppUserId")
+                        .HasForeignKey("AppUserID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
