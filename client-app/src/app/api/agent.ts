@@ -13,6 +13,15 @@ const sleep = (delay: number) => {
 
 axios.defaults.baseURL = 'http://localhost:5000/api';
 
+axios.interceptors.request.use(config => {
+    const token = store.commonStore.token;
+
+    //change in axios typedef has headers as an optional property of AxiosRequestConfig
+    //check config.headers in if to avoid the "Possibly undefined" error
+    if (token && config.headers) config.headers.Authorization = `Bearer ${token}`;
+    return config;
+})
+
 axios.interceptors.response.use(async response => {
 
     //await sleep(Math.floor(Math.random() * (1000 - 2500 + 1) + 1000));
